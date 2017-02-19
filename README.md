@@ -1,14 +1,14 @@
 # screeningprofile
 
-##Instructions to run the test
+##Instructions to run the app on node server
 
    Download node js if you do not have node js from "https://nodejs.org/en/download/"
 
    if git not available Download and install git from https://git-scm.com/download/win
 
-   Download as a zip folder in email and extract the contents.
-
-   Run "cd screening" or to root folder where you can see package.json, bower.json, gulpfile.js.
+   Go to github url "https://github.com/RameshRav/screeningprofile" and click clone or download button to download as zip file.
+  
+   Extract zip contents and Run "cd screeningprofile-master" in command prompt to root folder where you can see package.json, bower.json, gulpfile.js.
 
    Run npm install -g bower (in case if you do not have bower)
 
