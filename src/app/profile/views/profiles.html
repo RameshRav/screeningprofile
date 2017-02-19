@@ -1,0 +1,63 @@
+<div class="container-fluid search-container">
+  <div class="row">
+    <div data-ng-class="{'ng-hide':vm.clicked, 'col-sm-12':!vm.clicked} ">
+      <div>
+        <div class="row">
+          <div class="col-sm-7">
+            <paging></paging>
+          </div>
+          <div class="col-sm-5">
+            <search></search>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <table class="table table-hover">
+              <thead class="thead-inverse">
+                <th>
+                  <span role="button" data-ng-click="vm.sort('name')">
+	 Name
+	 <i class="fa fa-chevron-down" aria-hidden="true" data-ng-show="vm.sortorders.name===1"></i>
+ 	 <i class="fa fa-chevron-up" aria-hidden="true" data-ng-show="vm.sortorders.name===-1"></i>
+	 </span>
+                </th>
+                <th>
+                  <span role="button" data-ng-click="vm.sort('created')">
+	 Created date
+ 	 <i class="fa fa-chevron-down" aria-hidden="true" data-ng-show="vm.sortorders.created===1"></i>
+ 	 <i class="fa fa-chevron-up" aria-hidden="true" data-ng-show="vm.sortorders.created===-1"></i>
+	 </span>
+                </th>
+                <th>
+                  <span role="button" data-ng-click="vm.sort('modified')">
+	 Modified date
+  	 <i class="fa fa-chevron-down" aria-hidden="true" data-ng-show="vm.sortorders.modified===1"></i>
+ 	 <i class="fa fa-chevron-up" aria-hidden="true" data-ng-show="vm.sortorders.modified===-1"></i>
+	 </span>
+                </th>
+                <th>Country severity</th>
+              </thead>
+              <tbody>
+                <tr data-ng-show="vm.pages.count===0">
+                  <td colspan=4>No results found</td>
+                </tr>
+                <tr data-ng-repeat="profile in vm.profiles" data-ng-click="vm.showProfileDetails(profile.id)" style="cursor:pointer">
+                  <td>
+                    <a data-ng-bind="profile.name"></a>
+                  </td>
+                  <td data-ng-bind="profile.modified | date: 'medium'"></td>
+                  <td data-ng-bind="profile.created | date : 'medium'"></td>
+                  <td data-ng-bind="profile.country_check_severity"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-12" data-ng-if="vm.clicked">
+      <profile-details-page data-id="vm.profileId"></profile-details-page>
+    </div>
+  </div>
+</div>

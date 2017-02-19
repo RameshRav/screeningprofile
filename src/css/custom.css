@@ -1,0 +1,89 @@
+/** Custom css **/
+
+header{
+  background-color:#095077;
+  color:#fff;
+  height:50px;
+  font-size:8px;
+  padding-top:7px;
+}
+.list
+{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+    .list card
+    {
+        width:31.3%;
+        margin:1%;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+header h1{
+  font-size:1.8rem;
+}
+
+header div{
+position:fixed;
+top:0;
+}
+footer{
+background-color:#666;
+position:fixed;
+width:100%;
+color:#fff;
+font-size:0.8em;
+bottom:0;
+padding:1%;
+}
+
+.repository-list{
+   margin-top:2%;
+
+}
+.search-container{
+  margin: 30px 2%;
+  font-size: 0.9em;
+  -webkit-animation-name: fadeInUp; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+    animation-name: fadeInUp;
+    animation-duration: 1s;
+}
+
+.repository-search, .section{
+  margin-top:2%;
+}
+table{
+  border: 1px solid #095077;
+}
+table td{
+   border-bottom: 1px solid #095077;
+}
+.table .thead-inverse th{
+    background-color:#095077;
+}
+
+/* Media queries */
+
+@media all and (max-width: 992px) {
+  .list card {
+    width: 31.3%;
+  }
+}
+@media all and (max-width: 768px) {
+  .list card {
+    width: 48%;
+  }
+}
+
+@media all and (max-width: 576px) {
+  .list card {
+    width: 100%;
+  }
+}

@@ -1,0 +1,24 @@
+<div class="container-fluid search-container">
+  <div class="form-group">
+    <button data-ng-click="vm.gotoList()" class="btn btn-primary">Back to list view</button>
+  </div>
+    <div>
+      <div class="card">
+        <div class="card-header">
+          <div class="title">Profile details
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="content">
+            <div>{{vm.profile.name}}</div>
+            <div>Created: {{vm.profile.created | date:medium}}</div>
+            <div>Updated: {{vm.profile.modified | date:medium}}</div>
+          </div>
+        </div>
+      </div>
+    <div class="list" data-ng-if="vm.profile.url">
+      <card  data-key="'company_check_severity'" ></card>
+      <card  data-key="'ship_sanction_check_severity'"></card>
+      <card  data-key="'country_check_severity'"></card>
+    </div>
+</div>
