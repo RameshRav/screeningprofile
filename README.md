@@ -8,17 +8,19 @@
 
    Go to github url "https://github.com/RameshRav/screeningprofile" and click clone or download button to download as zip file.
   
-   Extract zip contents and Run "cd screeningprofile-master" in command prompt to root folder where you can see package.json, bower.json, gulpfile.js.
+   Extract zip contents 
+   
+   open command prompt and go to foleder "screenprofile-master" where the contents are extracted
 
-   Run npm install -g bower (in case if you do not have bower)
+   Run "npm install -g bower" (in case if you do not have bower)
 
-   Run npm install -g gulp
+   Run "npm install -g gulp"
 
-   Run npm install
+   Run "npm install"
 
-   Run bower install (select angular 1.5.11)
+   Run "bower install"
 
-   Run gulp and all the files will be buit in to build folder
+   Run "npm start" and all the files will be buit in to build folder
 
   Once the server starts hit the url http://localhost:8000
 
